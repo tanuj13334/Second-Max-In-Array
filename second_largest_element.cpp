@@ -3,7 +3,7 @@
 int return2largest(int arr[])
 {
 	int arr_size = sizeof(arr)/sizeof(arr[0]);
-        int first = INT_MIN;
+       int first = INT_MIN;
 	int second = INT_MIN;
  
         /* There should be atleast two elements */
