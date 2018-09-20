@@ -1,4 +1,5 @@
-/* Function to return the second largest elements */
+/* Function to return the second largest element */
+/* Assuming minimum value of array elements as INT_MIN */
 
 int return2largest(vector<int> arr)
 {
