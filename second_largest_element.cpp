@@ -1,8 +1,8 @@
 /* Function to return the second largest elements */
 
-int return2largest(int arr[])
+int return2largest(vector<int> arr)
 {
-	int arr_size = sizeof(arr)/sizeof(arr[0]);
+	int arr_size = arr.size();
        int first = INT_MIN;
 	int second = INT_MIN;
  
