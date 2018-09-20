@@ -2,34 +2,34 @@
 
 int return2largest(int arr[])
 {
-	int arr_size = arr.size();
-    int i, first, second;
+	int arr_size = sizeof(arr)/sizeof(arr[0]);
+        int first = INT_MIN;
+	int second = INT_MIN;
  
-    /* There should be atleast two elements */
-    if (arr_size < 2)
-    {
-        printf(" Invalid Input ");
-        return;
-    }
- 
-    first = second = INT_MIN;
-    for (i = 0; i < arr_size ; i ++)
-    {
-        /* If current element is smaller than first
-           then update both first and second */
-        if (arr[i] > first)
+        /* There should be atleast two elements */
+        if (arr_size < 2)
         {
-            second = first;
-            first = arr[i];
+           return -1;
         }
+	
+        for (int i = 0; i < arr_size ; i ++)
+        {
+            /* If current element is smaller than first
+               then update both first and second */
+           if (arr[i] > first)
+           {
+               second = first;
+               first = arr[i];
+           }
  
-        /* If arr[i] is in between first and 
-           second then update second  */
-        else if (arr[i] > second && arr[i] != first)
-            second = arr[i];
-    }
-    if (second == INT_MIN)
-        printf("There is no second largest element\n");
-    else
-        printf("The second largest element is %dn", second);
+           /* If arr[i] is in between first and 
+              second then update second  */
+           else if (arr[i] > second && arr[i] != first)
+               second = arr[i];
+        }
+	
+        if (second == INT_MIN)
+            return -1;
+        else
+            return second;
 }
