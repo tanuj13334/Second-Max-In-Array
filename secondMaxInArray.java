@@ -24,7 +24,7 @@ class SecondMaxVal
 
 	    /* If currElement is in between firstMax and secondMax then update secondMax  */
 	    } else if (compareNumbers(currElement, firstMaxInArray) != 0 &&
-	    (secondMaxInArray == null || compareNumbers(currElement, secondMaxInArray) > 0)){
+		       (secondMaxInArray == null || compareNumbers(currElement, secondMaxInArray) > 0)){
 		secondMaxInArray = currElement;
 	    }
 	}
